@@ -58,4 +58,4 @@ export const aphorisms: Aphorism[] = [
     date: "2024-10-05",
     slug: "knowledge-wisdom"
   }
-]
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
