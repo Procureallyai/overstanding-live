@@ -1,36 +1,9 @@
 import { useState } from 'react'
+import { aphorisms } from '@/data/aphorisms'
 
 export function Aphorisms() {
   const [searchTerm, setSearchTerm] = useState('')
   const [copiedId, setCopiedId] = useState<number | null>(null)
-
-  const aphorisms = [
-    {
-      id: 1,
-      text: "Understanding is not the accumulation of knowledge, but the transformation of perspective.",
-      theme: "Understanding"
-    },
-    {
-      id: 2,
-      text: "Wisdom begins where certainty ends.",
-      theme: "Wisdom"
-    },
-    {
-      id: 3,
-      text: "The deepest truths are often found in the simplest observations.",
-      theme: "Truth"
-    },
-    {
-      id: 4,
-      text: "To overstand is to rise above the surface and see the patterns beneath.",
-      theme: "Understanding"
-    },
-    {
-      id: 5,
-      text: "Knowledge tells us what is; wisdom tells us what matters.",
-      theme: "Wisdom"
-    }
-  ]
 
   const filteredAphorisms = aphorisms.filter(aphorism =>
     aphorism.text.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -69,42 +42,63 @@ export function Aphorisms() {
         </div>
 
         {/* Aphorisms List */}
-        <div className="space-y-6">
+        <div className="space-y-8">
           {filteredAphorisms.map((aphorism) => (
-            <div key={aphorism.id} className="border border-border rounded-lg p-6 hover:border-primary/50 transition-colors group">
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex-1">
-                  <blockquote className="text-lg leading-relaxed mb-4 text-foreground">
-                    "{aphorism.text}"
-                  </blockquote>
-                  <div className="flex items-center justify-between">
+            <article key={aphorism.id} className="border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300 group">
+              {aphorism.image && (
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img 
+                    src={aphorism.image} 
+                    alt={`Visual representation for: ${aphorism.text.substring(0, 50)}...`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              )}
+              <div className="p-6">
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <time>{new Date(aphorism.date).toLocaleDateString('en-US', { 
+                      year: 'numeric', 
+                      month: 'long', 
+                      day: 'numeric' 
+                    })}</time>
                     <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">
                       {aphorism.theme}
                     </span>
-                    <button
-                      onClick={() => copyToClipboard(aphorism.text, aphorism.id)}
-                      className="flex items-center gap-2 px-3 py-1 text-sm text-muted-foreground hover:text-primary transition-colors opacity-0 group-hover:opacity-100"
-                    >
-                      {copiedId === aphorism.id ? (
-                        <>
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          Copied!
-                        </>
-                      ) : (
-                        <>
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                          </svg>
-                          Copy
-                        </>
-                      )}
-                    </button>
                   </div>
+                  <button
+                    onClick={() => copyToClipboard(aphorism.text, aphorism.id)}
+                    className="flex items-center gap-2 px-3 py-1 text-sm text-muted-foreground hover:text-primary transition-colors opacity-0 group-hover:opacity-100"
+                  >
+                    {copiedId === aphorism.id ? (
+                      <>
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        Copied!
+                      </>
+                    ) : (
+                      <>
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                        </svg>
+                        Copy
+                      </>
+                    )}
+                  </button>
                 </div>
+                
+                <blockquote className="text-xl leading-relaxed mb-4 text-foreground font-medium">
+                  "{aphorism.text}"
+                </blockquote>
+                
+                <footer className="flex items-center justify-between">
+                  <cite className="text-sm text-muted-foreground not-italic">
+                    — {aphorism.author}
+                  </cite>
+                </footer>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
