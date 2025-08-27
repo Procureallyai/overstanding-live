@@ -14,7 +14,7 @@ export const aphorisms: Aphorism[] = [
     text: "Twice born: once in blood, and then in the fire and ashes of the human experience. Now, a walking tempest yet confined in a bottle.",
     author: "Live 📿",
     theme: "Human Experience",
-    image: "/images/writings/aphorisms/ChatGPT Image Aug 27, 2025, 04_15_26 PM.png",
+    image: "/images/writings/aphorisms/twice-born-tempest.jpg",
     date: "2025-08-27",
     slug: "twice-born-tempest"
   },
