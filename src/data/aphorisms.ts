@@ -23,7 +23,7 @@ export const aphorisms: Aphorism[] = [
     text: "Beyond the egos, beyond the personas, beyond the masks we wear—there lies the dust in the wind, and in that dust, the eternal dance of becoming.",
     author: "Live 📿",
     theme: "Identity",
-    image: "/images/writings/aphorisms/dust-in-wind-atmospheric.jpg",
+    image: "/images/writings/aphorisms/dust-in-wind-humility.jpg",
     date: "2025-08-28",
     slug: "dust-in-wind"
   },
