@@ -158,6 +158,7 @@ export const aphorisms: Aphorism[] = [
     text: "Understanding is not the accumulation of knowledge, but the transformation of perspective.",
     author: "Live 📿",
     theme: "Understanding",
+    image: "/images/writings/aphorisms/conflict-reveals-character.jpg",
     date: "2024-12-01",
     slug: "understanding-transformation"
   },
