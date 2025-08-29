@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Layout } from '@/components/layout/Layout'
 import { Home } from '@/pages/Home'
 import { Essays } from '@/pages/Essays'
+import { EssayDetail } from '@/pages/EssayDetail'
 import { Aphorisms } from '@/pages/Aphorisms'
 import { Themes } from '@/pages/Themes'
 import { Library } from '@/pages/Library'
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/essays" element={<Essays />} />
+          <Route path="/essays/:slug" element={<EssayDetail />} />
           <Route path="/aphorisms" element={<Aphorisms />} />
           <Route path="/themes" element={<Themes />} />
           <Route path="/library" element={<Library />} />
