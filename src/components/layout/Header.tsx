@@ -15,10 +15,12 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const toggleMobileMenu = () => {
+    console.log('Toggle clicked, current state:', isMobileMenuOpen)
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
   const closeMobileMenu = () => {
+    console.log('Closing mobile menu')
     setIsMobileMenuOpen(false)
   }
 
@@ -57,10 +59,15 @@ export function Header() {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button 
-              onClick={toggleMobileMenu}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              onClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                toggleMobileMenu()
+              }}
+              className="text-muted-foreground hover:text-primary transition-colors p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-primary"
               aria-expanded={isMobileMenuOpen}
               aria-label="Toggle navigation menu"
+              type="button"
             >
               <span className="sr-only">{isMobileMenuOpen ? 'Close menu' : 'Open menu'}</span>
               {isMobileMenuOpen ? (
@@ -77,27 +84,28 @@ export function Header() {
         </div>
 
         {/* Mobile Navigation Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-border bg-background">
-            <nav className="px-2 pt-2 pb-3 space-y-1">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  onClick={closeMobileMenu}
-                  className={cn(
-                    'block px-3 py-2 text-base font-medium transition-colors hover:text-primary hover:bg-muted rounded-md',
-                    location.pathname === item.href
-                      ? 'text-primary bg-muted'
-                      : 'text-muted-foreground'
-                  )}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        )}
+        <div className={cn(
+          "md:hidden border-t border-border bg-background transition-all duration-300 ease-in-out overflow-hidden",
+          isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        )}>
+          <nav className="px-2 pt-2 pb-3 space-y-1">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                onClick={closeMobileMenu}
+                className={cn(
+                  'block px-3 py-2 text-base font-medium transition-colors hover:text-primary hover:bg-muted rounded-md',
+                  location.pathname === item.href
+                    ? 'text-primary bg-muted'
+                    : 'text-muted-foreground'
+                )}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
     </header>
   )
