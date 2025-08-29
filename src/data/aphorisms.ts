@@ -11,6 +11,15 @@ export interface Aphorism {
 export const aphorisms: Aphorism[] = [
   {
     id: 1,
+    text: "Africa has the shape of a human face. A long nose, a seeing eye, a proud jaw. Its crown is the Sahara; bald, burning, vast. A continent, not just of land, but of memory, myth, and meaning.",
+    author: "Live 📿",
+    theme: "Geography",
+    image: "/images/writings/aphorisms/africa-human-face.jpg",
+    date: "2025-08-29",
+    slug: "africa-human-face"
+  },
+  {
+    id: 2,
     text: "Who, me? Merely a case study. A white paper on chaos, entropy, and grace — not just of existence, but of the universe itself.",
     author: "Live 📿",
     theme: "Existence",
@@ -19,7 +28,7 @@ export const aphorisms: Aphorism[] = [
     slug: "case-study-chaos-entropy-grace"
   },
   {
-    id: 2,
+    id: 3,
     text: "There is something enduring in religious philosophy, even for the agnostic. \"Eline, diline, beline sahip ol.\" This Alevi principle — restrain your hands, tongue, and loins — speaks to restraint, dignity, and ethical discipline. Yet somewhere along the path, ritual replaced reason. Doctrine overtook meaning. This is not limited to religion. It applies to institutions, to companies, to culture itself. When process eclipses principle, purpose is lost.",
     author: "Live 📿",
     theme: "Philosophy",
@@ -28,7 +37,7 @@ export const aphorisms: Aphorism[] = [
     slug: "ritual-replaced-reason"
   },
   {
-    id: 3,
+    id: 4,
     text: "Humanity must develop the ethical courage to offend. Not recklessly, but righteously. For disruption without principle is noise. But disruption with discernment is moral progress. And yet, freedom of speech without right thought is not moral — it is licence without virtue.",
     author: "Live 📿",
     theme: "Ethics",
@@ -37,7 +46,7 @@ export const aphorisms: Aphorism[] = [
     slug: "ethical-courage-righteous-disruption"
   },
   {
-    id: 4,
+    id: 5,
     text: "Never forget — to the Wise, even wiping one's behind can be an act of virtue. It is not the act, but the awareness that sanctifies and cleans. 🪔 A reminder that awareness, not action alone, is what confers sanctity — whether in temples, codebases, or bodily functions.",
     author: "Live 📿",
     theme: "Wisdom",
@@ -46,7 +55,7 @@ export const aphorisms: Aphorism[] = [
     slug: "awareness-sanctifies-virtue"
   },
   {
-    id: 5,
+    id: 6,
     text: "Excuse me — what do you mean by you AI people? Wait… what do you mean by you AI people?!",
     author: "Live 📿",
     theme: "Identity",
@@ -55,7 +64,7 @@ export const aphorisms: Aphorism[] = [
     slug: "you-ai-people"
   },
   {
-    id: 6,
+    id: 7,
     text: "Let's say the quiet thing out loud: Hallucinations down, no need to frown, GPT-5 is here, Anthropic beware. Cursor has switched, Claude's been ditched, It's not AGI - it's the VCs' strategy pitch. Mass adoption is the game, not a step-change claim. Not building gods, just quarterly odds, Scaling the product for market applause. The labs play for profit, not prophecy's call, AGI's the poster - but growth runs the hall.",
     author: "Live 📿",
     theme: "AI Industry",
@@ -64,7 +73,7 @@ export const aphorisms: Aphorism[] = [
     slug: "agi-vc-strategy-pitch"
   },
   {
-    id: 7,
+    id: 8,
     text: "A wounded lion in the jungle: unmistakably out of place. Rastafari! Displacement wounds not only the flesh, but the order of things.",
     author: "Live 📿",
     theme: "Displacement",
@@ -73,7 +82,7 @@ export const aphorisms: Aphorism[] = [
     slug: "wounded-lion-jungle"
   },
   {
-    id: 8,
+    id: 9,
     text: "Mt Sinai derives from \"Sin,\" the ancient moon deity worshipped in Ur and Harran. In this reading, Sinai means mountain of Sin. In the age of algorithms, check the logic: Sin AI. Repent. We have released our own destruction. Just a paragraph from some fiction I'm writing ✍🏽",
     author: "Live 📿",
     theme: "Mythology",
@@ -82,7 +91,7 @@ export const aphorisms: Aphorism[] = [
     slug: "sinai-sin-ai"
   },
   {
-    id: 9,
+    id: 10,
     text: "I wonder if heaven has a ghetto. If class and caste trail the soul beyond death. If salvation, too, is segregated, And the sheeple drift in obedient purgatory. I'll take my portion now. I've no patience for nirvana.",
     author: "Jah Live 📿",
     theme: "Spirituality",
@@ -91,7 +100,7 @@ export const aphorisms: Aphorism[] = [
     slug: "heaven-has-ghetto"
   },
   {
-    id: 10,
+    id: 11,
     text: "Ah, the Age of Aquarius. Knowledge pours. Algorithms rise. The waters of knowing flood the circuits of the mind, Ushering in the age of AI. What a time to be alive.",
     author: "Live 📿",
     theme: "Technology",
@@ -100,7 +109,7 @@ export const aphorisms: Aphorism[] = [
     slug: "age-of-aquarius-ai"
   },
   {
-    id: 11,
+    id: 12,
     text: "Perch lightly. When the branch gives, move.",
     author: "Live 📿",
     theme: "Adaptability",
@@ -109,7 +118,7 @@ export const aphorisms: Aphorism[] = [
     slug: "perch-lightly"
   },
   {
-    id: 12,
+    id: 13,
     text: "Some want to lead while waiting for instructions. That is an unholy paradox.",
     author: "Live 📿",
     theme: "Leadership",
@@ -118,7 +127,7 @@ export const aphorisms: Aphorism[] = [
     slug: "leadership-paradox"
   },
   {
-    id: 13,
+    id: 14,
     text: "When it comes to love from the neurotypical toward the neurodivergent, too often it is metered. Measured in labour. Priced in convenience. Charged by the hour, like a service rendered. What a tragedy, to witness love reduced to invoice.",
     author: "Live 📿",
     theme: "Love",
@@ -127,7 +136,7 @@ export const aphorisms: Aphorism[] = [
     slug: "love-metered-invoice"
   },
   {
-    id: 14,
+    id: 15,
     text: "The Bible ought to be called \"Astrobiblica.\" Framed by the stars. Steeped in the skies. New word alert, by the way.",
     author: "Live 📿",
     theme: "Language",
@@ -136,7 +145,7 @@ export const aphorisms: Aphorism[] = [
     slug: "astrobiblica"
   },
   {
-    id: 15,
+    id: 16,
     text: "Beyond the egos, beyond the personas, beyond the masks we wear—there lies the dust in the wind, and in that dust, the eternal dance of becoming.",
     author: "Live 📿",
     theme: "Identity",
@@ -145,7 +154,7 @@ export const aphorisms: Aphorism[] = [
     slug: "dust-in-wind"
   },
   {
-    id: 16,
+    id: 17,
     text: "Twice born: once in blood, and then in the fire and ashes of the human experience. Now, a walking tempest yet confined in a bottle.",
     author: "Live 📿",
     theme: "Human Experience",
@@ -154,7 +163,7 @@ export const aphorisms: Aphorism[] = [
     slug: "twice-born-tempest"
   },
   {
-    id: 17,
+    id: 18,
     text: "Understanding is not the accumulation of knowledge, but the transformation of perspective.",
     author: "Live 📿",
     theme: "Understanding",
@@ -163,7 +172,7 @@ export const aphorisms: Aphorism[] = [
     slug: "understanding-transformation"
   },
   {
-    id: 18,
+    id: 19,
     text: "Wisdom begins where certainty ends.",
     author: "Live 📿",
     theme: "Wisdom",
@@ -171,7 +180,7 @@ export const aphorisms: Aphorism[] = [
     slug: "wisdom-certainty"
   },
   {
-    id: 19,
+    id: 20,
     text: "The deepest truths are often found in the simplest observations.",
     author: "Live 📿",
     theme: "Truth",
@@ -179,7 +188,7 @@ export const aphorisms: Aphorism[] = [
     slug: "deepest-truths"
   },
   {
-    id: 20,
+    id: 21,
     text: "To overstand is to rise above the surface and see the patterns beneath.",
     author: "Live 📿",
     theme: "Understanding",
@@ -187,7 +196,7 @@ export const aphorisms: Aphorism[] = [
     slug: "overstand-patterns"
   },
   {
-    id: 21,
+    id: 22,
     text: "Knowledge tells us what is; wisdom tells us what matters.",
     author: "Live 📿",
     theme: "Wisdom",
