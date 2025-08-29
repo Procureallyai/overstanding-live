@@ -33,12 +33,6 @@ export function Footer() {
             >
               Contact
             </Link>
-            <a 
-              href="#" 
-              className="text-sm text-muted-foreground hover:text-primary transition-colors"
-            >
-              RSS
-            </a>
           </div>
         </div>
       </div>
