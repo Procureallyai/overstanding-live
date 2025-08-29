@@ -1,6 +1,9 @@
 # Overstanding Live
 
-A modern web application built with Vite, React, and TypeScript, exploring themes of understanding, wisdom, and knowledge through essays, aphorisms, and curated content.
+A modern web application for sharing philosophical insights, aphorisms, and essays.
+
+## Image Cache Fix
+Force deployment refresh for image loading issues.
 
 ## Template Selection & Adaptation
 
