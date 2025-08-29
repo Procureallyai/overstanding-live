@@ -11,6 +11,15 @@ export interface Aphorism {
 export const aphorisms: Aphorism[] = [
   {
     id: 1,
+    text: "Perch lightly. When the branch gives, move.",
+    author: "Live 📿",
+    theme: "Adaptability",
+    image: "/images/writings/aphorisms/perch-lightly-bird.jpg",
+    date: "2025-08-29",
+    slug: "perch-lightly"
+  },
+  {
+    id: 2,
     text: "Some want to lead while waiting for instructions. That is an unholy paradox.",
     author: "Live 📿",
     theme: "Leadership",
@@ -19,7 +28,7 @@ export const aphorisms: Aphorism[] = [
     slug: "leadership-paradox"
   },
   {
-    id: 2,
+    id: 3,
     text: "When it comes to love from the neurotypical toward the neurodivergent, too often it is metered. Measured in labour. Priced in convenience. Charged by the hour, like a service rendered. What a tragedy, to witness love reduced to invoice.",
     author: "Live 📿",
     theme: "Love",
@@ -28,7 +37,7 @@ export const aphorisms: Aphorism[] = [
     slug: "love-metered-invoice"
   },
   {
-    id: 3,
+    id: 4,
     text: "The Bible ought to be called \"Astrobiblica.\" Framed by the stars. Steeped in the skies. New word alert, by the way.",
     author: "Live 📿",
     theme: "Language",
@@ -37,7 +46,7 @@ export const aphorisms: Aphorism[] = [
     slug: "astrobiblica"
   },
   {
-    id: 4,
+    id: 5,
     text: "Beyond the egos, beyond the personas, beyond the masks we wear—there lies the dust in the wind, and in that dust, the eternal dance of becoming.",
     author: "Live 📿",
     theme: "Identity",
@@ -46,7 +55,7 @@ export const aphorisms: Aphorism[] = [
     slug: "dust-in-wind"
   },
   {
-    id: 5,
+    id: 6,
     text: "Twice born: once in blood, and then in the fire and ashes of the human experience. Now, a walking tempest yet confined in a bottle.",
     author: "Live 📿",
     theme: "Human Experience",
@@ -55,7 +64,7 @@ export const aphorisms: Aphorism[] = [
     slug: "twice-born-tempest"
   },
   {
-    id: 6,
+    id: 7,
     text: "Understanding is not the accumulation of knowledge, but the transformation of perspective.",
     author: "Live 📿",
     theme: "Understanding",
@@ -63,7 +72,7 @@ export const aphorisms: Aphorism[] = [
     slug: "understanding-transformation"
   },
   {
-    id: 7,
+    id: 8,
     text: "Wisdom begins where certainty ends.",
     author: "Live 📿",
     theme: "Wisdom",
@@ -71,7 +80,7 @@ export const aphorisms: Aphorism[] = [
     slug: "wisdom-certainty"
   },
   {
-    id: 8,
+    id: 9,
     text: "The deepest truths are often found in the simplest observations.",
     author: "Live 📿",
     theme: "Truth",
@@ -79,7 +88,7 @@ export const aphorisms: Aphorism[] = [
     slug: "deepest-truths"
   },
   {
-    id: 9,
+    id: 10,
     text: "To overstand is to rise above the surface and see the patterns beneath.",
     author: "Live 📿",
     theme: "Understanding",
@@ -87,7 +96,7 @@ export const aphorisms: Aphorism[] = [
     slug: "overstand-patterns"
   },
   {
-    id: 10,
+    id: 11,
     text: "Knowledge tells us what is; wisdom tells us what matters.",
     author: "Live 📿",
     theme: "Wisdom",
