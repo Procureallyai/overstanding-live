@@ -42,22 +42,24 @@ export function Aphorisms() {
         </div>
 
         {/* Aphorisms List */}
-        <div className="space-y-12">
+        <div className="space-y-8">
           {filteredAphorisms.map((aphorism, index) => {
             const isLatest = index === 0;
             const hasImage = !!aphorism.image;
             
-            if (isLatest && hasImage) {
-              // Featured layout for the latest aphorism with image
+            if (hasImage) {
+              // Image layout for all aphorisms with images
               return (
                 <article key={aphorism.id} className="border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300 group">
-                  <div className="grid lg:grid-cols-2 gap-0">
-                    <div className="order-2 lg:order-1 p-8 flex flex-col justify-center">
+                  <div className={`grid gap-0 ${isLatest ? 'lg:grid-cols-2' : 'md:grid-cols-3'}`}>
+                    <div className={`${isLatest ? 'order-2 lg:order-1 p-8' : 'order-2 md:order-1 col-span-2 p-6'} flex flex-col justify-center`}>
                       <div className="mb-6">
                         <div className="flex items-center gap-3 text-sm text-muted-foreground mb-4">
-                          <span className="px-2 py-1 bg-primary text-primary-foreground text-xs rounded-full font-medium">
-                            Latest
-                          </span>
+                          {isLatest && (
+                            <span className="px-2 py-1 bg-primary text-primary-foreground text-xs rounded-full font-medium">
+                              Latest
+                            </span>
+                          )}
                           <time>{new Date(aphorism.date).toLocaleDateString('en-US', { 
                             year: 'numeric', 
                             month: 'long', 
@@ -68,7 +70,7 @@ export function Aphorisms() {
                           </span>
                         </div>
                         
-                        <blockquote className="text-2xl lg:text-3xl leading-relaxed mb-6 text-foreground font-medium">
+                        <blockquote className={`${isLatest ? 'text-2xl lg:text-3xl' : 'text-xl'} leading-relaxed mb-6 text-foreground font-medium`}>
                           "{aphorism.text}"
                         </blockquote>
                         
@@ -78,7 +80,7 @@ export function Aphorisms() {
                           </cite>
                           <button
                             onClick={() => copyToClipboard(aphorism.text, aphorism.id)}
-                            className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-primary transition-colors border border-border rounded-md hover:border-primary/50"
+                            className={`flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground hover:text-primary transition-colors ${isLatest ? 'border border-border rounded-md hover:border-primary/50' : 'opacity-0 group-hover:opacity-100'}`}
                           >
                             {copiedId === aphorism.id ? (
                               <>
@@ -100,7 +102,7 @@ export function Aphorisms() {
                       </div>
                     </div>
                     
-                    <div className="order-1 lg:order-2 aspect-[4/5] lg:aspect-auto overflow-hidden">
+                    <div className={`${isLatest ? 'order-1 lg:order-2 aspect-[4/5] lg:aspect-auto' : 'order-1 md:order-2 aspect-[4/5]'} overflow-hidden`}>
                       <img 
                         src={aphorism.image} 
                         alt={`Visual representation for: ${aphorism.text.substring(0, 50)}...`}
@@ -112,7 +114,7 @@ export function Aphorisms() {
               );
             }
             
-            // Compact layout for other aphorisms
+            // Text-only layout for aphorisms without images
             return (
               <article key={aphorism.id} className="border border-border rounded-lg p-6 hover:border-primary/50 transition-colors group">
                 <div className="flex items-start justify-between gap-4 mb-4">
