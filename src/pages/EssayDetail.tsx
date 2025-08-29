@@ -64,11 +64,11 @@ export function EssayDetail() {
         {/* Featured Image */}
         {essay.image && (
           <div className="mb-12">
-            <div className="aspect-[4/5] md:aspect-[3/2] overflow-hidden rounded-lg border border-border">
+            <div className="rounded-lg border border-border overflow-hidden">
               <img 
                 src={essay.image} 
                 alt={`Visual representation for: ${essay.title}`}
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
