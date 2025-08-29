@@ -3,6 +3,8 @@ import { aphorisms } from '@/data/aphorisms'
 
 export function Aphorisms() {
   const [copiedId, setCopiedId] = useState<number | null>(null)
+  const [currentPage, setCurrentPage] = useState(1)
+  const itemsPerPage = 5
 
   const copyToClipboard = async (text: string, id: number) => {
     try {
@@ -12,6 +14,17 @@ export function Aphorisms() {
     } catch (err) {
       console.error('Failed to copy text: ', err)
     }
+  }
+
+  // Calculate pagination
+  const totalPages = Math.ceil(aphorisms.length / itemsPerPage)
+  const startIndex = (currentPage - 1) * itemsPerPage
+  const endIndex = startIndex + itemsPerPage
+  const currentAphorisms = aphorisms.slice(startIndex, endIndex)
+
+  const goToPage = (page: number) => {
+    setCurrentPage(page)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
@@ -24,10 +37,9 @@ export function Aphorisms() {
           </p>
         </header>
 
-
         {/* Aphorisms List */}
         <div className="space-y-8">
-          {aphorisms.map((aphorism, index) => {
+          {currentAphorisms.map((aphorism, index) => {
             const isLatest = index === 0;
             const hasImage = !!aphorism.image;
             
@@ -147,6 +159,43 @@ export function Aphorisms() {
             );
           })}
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex justify-center mt-12">
+            <div className="flex gap-2">
+              <button 
+                onClick={() => goToPage(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="px-4 py-2 border border-border rounded-md hover:bg-accent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Previous
+              </button>
+              
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                <button
+                  key={page}
+                  onClick={() => goToPage(page)}
+                  className={`px-4 py-2 rounded-md transition-colors ${
+                    currentPage === page
+                      ? 'bg-primary text-primary-foreground'
+                      : 'border border-border hover:bg-accent'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+              
+              <button 
+                onClick={() => goToPage(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="px-4 py-2 border border-border rounded-md hover:bg-accent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        )}
 
       </div>
     </div>
