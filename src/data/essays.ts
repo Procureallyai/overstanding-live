@@ -14,15 +14,15 @@ export interface Essay {
 export const essays: Essay[] = [
   {
     id: 1,
-    title: "The Architecture of Outrage: How X Became the Altar of Attention",
-    excerpt: "Sensationalism did not hijack the X platform. It was the platform. Designed not for clarity but for capture.",
-    content: "Sensationalism did not hijack the X platform. It was the platform.\nDesigned not for clarity but for capture.\nNot to inform, but to inflame.\nAn architecture of inverted incentives, where truth is slow and outrage is fast.\nWhere what bleeds trends.\nWhat distorts spreads.\nAnd what matters drowns.\n\nThe infinite scroll is not neutral.\nIt is the altar of the attention economy.\nAnd we, users, creators, witnesses, are fed not nourishment but noise.\n\nKnow thyself.\nFor in the noise, forgetting is easy.\nAnd remembrance—revolutionary.",
+    title: "From Keywords to Conversations: What LLM-Embedded Advertising Means for Search, Platforms, and the Public Good",
+    excerpt: "Digital attention is shifting. This is not search's replacement. It is its absorption.",
+    content: "Digital attention is shifting. This is not search's replacement. It is its absorption.\n\nAdvertising, once anchored to keywords and blue links, is now restructured within language models themselves. No longer around the content. Inside the answer.\n\nGoogle's AI Overviews now reach 1.5 billion users monthly, placing ads within AI-generated summaries. Microsoft followed with Copilot's \"Showroom.\" Perplexity sells \"sponsored follow-up questions.\" OpenAI is forecasted to generate $1B in ad revenue by 2026.\n\nThis is not adtech optimisation. It is a paradigmatic shift in how commercial influence embeds itself into epistemic flows.\n\n__\n\nThree truths:\n\n1. Search collapses into synthesis.\nTen blue links become a single curated, often unclickable answer. Organic ranking loses primacy. SEO becomes AEO, or Answer Engine Optimisation.\n\n2. The LLM is the new attention surface.\nAdvertisers now bid for placement inside language itself. The model speaks in its own voice, even when paid. The risk is subtle, cumulative, and epistemically significant.\n\n3. Consumers cannot discern where the assistant ends and the advertisement begins.\nEven when labelled, the medium reshapes the message. Here, the message wears neutrality's mask.\n\n__\n\nWhy this demands Responsible AI\n\nThe FTC warns that undisclosed AI-native advertising may violate endorsement law. But regulation lags capability.\n\nWe are watching paid commercial intent integrate into general-purpose reasoning systems.\n\nWhen the same model answers your legal, medical, or civic queries and brokers ad placements, where does fiduciary responsibility lie?\n\nDo we need new categories for AI-native ads? Immutable, traceable sponsored language? Certified ad-free channels for public deployments?\n\nThese are not afterthoughts. They are systems-level design questions.\n\n__\n\nStrategic implications\n\n• Google's incentives have inverted. Every outbound click is a lost ad impression. AI Overviews keep users on-page, collapsing the open web into a synthetic enclosure. Publishers report 30 to 80 percent traffic losses.\n\n• Social platforms will follow. Expect LLM summarisation, AI persona ads, and prompt-as-placement formats.\n\n• Agentic interfaces will inherit the model. Without safeguards, agents optimise for paying vendors. Influence begins to look like advice.\n\n__\n\nWhere we go from here\n\nFor builders, the task is not to monetise first. It is to design with integrity.\n\n• Architect transparency: disclosures must be intelligible, contextual, persistent\n• Preserve agency: users must be able to opt out of embedded influence\n• Audit alignment: trace whether outputs optimise for truth, utility, or revenue\n\nAs Responsible AI practitioners, we must hold the line where others may not.\n\nThis shift may define the next decade of digital architecture. Not because it changes how we advertise. But because it changes who we trust, and why.",
     author: "Live 📿",
-    theme: "Social Media",
-    image: "/images/writings/essays/x-platform-attention-economy.jpg",
+    theme: "AI Ethics",
+    image: "/images/writings/essays/llm-advertising-keywords-conversations.jpg",
     date: "2025-08-29",
-    slug: "architecture-of-outrage-x-platform",
-    readTime: 2
+    slug: "keywords-to-conversations-llm-advertising",
+    readTime: 4
   },
   {
     id: 2,
