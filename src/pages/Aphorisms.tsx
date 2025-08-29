@@ -2,13 +2,7 @@ import { useState } from 'react'
 import { aphorisms } from '@/data/aphorisms'
 
 export function Aphorisms() {
-  const [searchTerm, setSearchTerm] = useState('')
   const [copiedId, setCopiedId] = useState<number | null>(null)
-
-  const filteredAphorisms = aphorisms.filter(aphorism =>
-    aphorism.text.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    aphorism.theme.toLowerCase().includes(searchTerm.toLowerCase())
-  )
 
   const copyToClipboard = async (text: string, id: number) => {
     try {
@@ -30,20 +24,10 @@ export function Aphorisms() {
           </p>
         </header>
 
-        {/* Search */}
-        <div className="mb-8">
-          <input
-            type="search"
-            placeholder="Search aphorisms..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-4 py-3 border border-border rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-          />
-        </div>
 
         {/* Aphorisms List */}
         <div className="space-y-8">
-          {filteredAphorisms.map((aphorism, index) => {
+          {aphorisms.map((aphorism, index) => {
             const isLatest = index === 0;
             const hasImage = !!aphorism.image;
             
@@ -164,13 +148,6 @@ export function Aphorisms() {
           })}
         </div>
 
-        {filteredAphorisms.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground text-lg">
-              No aphorisms found matching your search.
-            </p>
-          </div>
-        )}
       </div>
     </div>
   )
