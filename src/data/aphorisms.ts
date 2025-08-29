@@ -23,7 +23,7 @@ export const aphorisms: Aphorism[] = [
     text: "There is something enduring in religious philosophy, even for the agnostic. \"Eline, diline, beline sahip ol.\" This Alevi principle — restrain your hands, tongue, and loins — speaks to restraint, dignity, and ethical discipline. Yet somewhere along the path, ritual replaced reason. Doctrine overtook meaning. This is not limited to religion. It applies to institutions, to companies, to culture itself. When process eclipses principle, purpose is lost.",
     author: "Live 📿",
     theme: "Philosophy",
-    image: "/images/writings/aphorisms/ritual-replaced-reason.jpg",
+    image: "/images/writings/aphorisms/philosophy1.jpg",
     date: "2025-08-29",
     slug: "ritual-replaced-reason"
   },
@@ -32,7 +32,7 @@ export const aphorisms: Aphorism[] = [
     text: "Humanity must develop the ethical courage to offend. Not recklessly, but righteously. For disruption without principle is noise. But disruption with discernment is moral progress. And yet, freedom of speech without right thought is not moral — it is licence without virtue.",
     author: "Live 📿",
     theme: "Ethics",
-    image: "/images/writings/aphorisms/ethical-courage-righteous-disruption.jpg",
+    image: "/images/writings/aphorisms/ethics1.jpg",
     date: "2025-08-29",
     slug: "ethical-courage-righteous-disruption"
   },
