@@ -73,26 +73,6 @@ export function About() {
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-heading mb-6">Technical Notes</h2>
-            <div className="space-y-6 text-muted-foreground leading-relaxed">
-              <p>
-                This site is built with modern web technologies, prioritizing performance, accessibility, and user experience:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Built with Vite, React, and TypeScript</li>
-                <li>Styled with Tailwind CSS and shadcn/ui components</li>
-                <li>Hosted on Azure Static Web Apps with Azure Front Door</li>
-                <li>Designed for WCAG 2.2 AA accessibility compliance</li>
-                <li>Optimized for performance with a target Lighthouse score of 90+</li>
-                <li>Respects user preferences for reduced motion</li>
-              </ul>
-              <p>
-                The visual design draws inspiration from the shadcn/ui "Taxonomy" template, adapted to reflect 
-                the site's focus on typography, readability, and contemplative content.
-              </p>
-            </div>
-          </section>
 
           {/* Signature Section */}
           <section className="mt-16 pt-8 border-t border-border">
