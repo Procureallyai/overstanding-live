@@ -31,9 +31,9 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3" onClick={closeMobileMenu}>
             <img 
-              src="/overstanding_live_logo_200x200.jpg" 
+              src="/overstanding_live_logo_transparent.png" 
               alt="Overstanding Live" 
-              className="h-8 w-8 rounded-sm"
+              className="h-8 w-8"
             />
             <span className="font-heading text-xl font-normal">Overstanding Live</span>
           </Link>

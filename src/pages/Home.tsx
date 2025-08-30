@@ -22,9 +22,9 @@ export function Home() {
       <section className="text-center py-20">
         <div className="max-w-4xl mx-auto">
           <img 
-            src="/overstanding_live_logo_200x200.jpg" 
+            src="/overstanding_live_logo_transparent.png" 
             alt="Overstanding Live" 
-            className="h-[275px] w-[275px] mx-auto mb-8 rounded-lg"
+            className="h-[275px] w-[275px] mx-auto mb-8"
           />
           <h1 className="text-4xl md:text-6xl font-heading mb-6 text-foreground">
             An experiment in understanding

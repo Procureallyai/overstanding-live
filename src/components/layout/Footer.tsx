@@ -10,9 +10,9 @@ export function Footer() {
           {/* Brand */}
           <div className="flex items-center space-x-2">
             <img 
-              src="/overstanding_live_logo_200x200.jpg" 
+              src="/overstanding_live_logo_transparent.png" 
               alt="Overstanding Live" 
-              className="h-6 w-6 rounded-sm"
+              className="h-6 w-6"
             />
             <span className="text-sm text-muted-foreground">
               © {currentYear} Overstanding Live
