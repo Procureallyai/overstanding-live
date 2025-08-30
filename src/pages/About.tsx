@@ -93,6 +93,22 @@ export function About() {
               </p>
             </div>
           </section>
+
+          {/* Signature Section */}
+          <section className="mt-16 pt-8 border-t border-border">
+            <div className="text-right">
+              <div className="inline-block">
+                <div className="mb-2">
+                  <span className="text-2xl font-cursive text-primary italic">
+                    Live F. Livingstone Rowe
+                  </span>
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  Founder, Overstanding Live
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>

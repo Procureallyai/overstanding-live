@@ -96,6 +96,11 @@
     letter-spacing: 0.025em;
   }
   
+  /* Cursive signature font */
+  .font-cursive {
+    font-family: 'Dancing Script', 'Brush Script MT', cursive;
+  }
+  
   /* Respect reduced motion preferences */
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
