@@ -21,11 +21,39 @@ export function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission - replace with actual Azure Function or API endpoint
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    setSubmitted(true)
-    setIsSubmitting(false)
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      })
+      
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
+      
+      const result = await response.json()
+      
+      if (result.success) {
+        setSubmitted(true)
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        })
+      } else {
+        throw new Error(result.error || 'Failed to send message')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      alert('Failed to send message. Please try again later.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (submitted) {

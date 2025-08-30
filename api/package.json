@@ -1,0 +1,12 @@
+{
+  "name": "overstanding-live-api",
+  "version": "1.0.0",
+  "description": "Azure Functions for Overstanding Live contact form",
+  "main": "contact.js",
+  "dependencies": {
+    "@azure/communication-email": "^1.0.0"
+  },
+  "devDependencies": {
+    "@azure/functions": "^4.0.0"
+  }
+}
